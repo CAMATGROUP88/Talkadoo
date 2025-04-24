@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talkadoo</title>
+    <link rel="icon" type="image/jpeg" href="talkadoo.jpeg">
+    <link rel="stylesheet" href="chat.css">
+    <script type="module" src="app.js" defer></script>
+    <script type="module" src="auth.js" defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="container">
+        <img src="talkadoo.jpeg" alt="Talkadoo Logo" id="logo">
+        
+        <!-- Nama Pengguna -->
+        <h2 id="user-name">Nama Pengguna</h2>
+    
+        <!-- Daftar Pengguna Online -->
+        <div id="online-users">
+            <h3>Pengguna Online</h3>
+            <ul id="users-list"></ul>
+        </div>
+        <button id="change-name-btn" aria-label="Ganti nama pengguna">Ganti Nama</button>
+        <button id="clear-chat-btn" aria-label="Hapus semua pesan">Hapus Semua Chat</button>
+        <button id="logout-btn" aria-label="Keluar dari aplikasi">Logout</button>
+    
+        <!-- Kotak Chat -->
+        <div id="chat-box">
+            <p>Memuat pesan...</p>
+        </div>
+    
+        <div id="typing-indicator"></div>
+    
+        <!-- Reply Preview -->
+        <div id="reply-preview" style="display: none;">
+            <i class="fas fa-reply"></i> <!-- Ikon reply -->
+            <strong>Membalas:</strong>
+            <span id="reply-message" class="reply-text"></span>
+            <button id="cancel-reply-btn" aria-label="Batal membalas">Batal</button>
+        </div>
+    
+        <!-- Input Pesan -->
+        <div id="input-area">
+            <textarea id="input-box" placeholder="Ketik pesan..." aria-label="Kotak input pesan" rows="2"></textarea>
+            <button id="emoji-btn" class="emoji-button" aria-label="Buka pemilih emoji">😀</button>
+            <emoji-picker id="emoji-picker"></emoji-picker>
+            <button id="send-btn" class="send-button" aria-label="Kirim pesan">Kirim</button>
+        </div>
+    </div>
+</body>
+</html>
